@@ -1,3 +1,6 @@
+# key board function also remove after obtain capsules verification from code ocean
+import keyboard
+
 # Create a text file
 file = open ("1.txt",'w+')
 
@@ -14,7 +17,7 @@ n = random.randint(10,900)
 print ("\n")
 print("\tRef no.",n,"HMG    .Date",date.today())
 
-# write in file
+# write in result text file
 
 print  ("\n", file =file)
 print("Ref no", n,"HMG        .Date",date.today(), file = file)
@@ -36,13 +39,21 @@ print ("\twithout entering alphabet or unit ")
 print ("\tdo not enter blank or 0 value ")
 print ("\tsame value may give zero results ")
 print (z,'\n')
+keyboard.press_and_release('enter')
+# this enter function inevitably press entre key
+#this function is use for codeocean
+#this line will be remove after obtain capsules verification from code ocean
+keyboard.press_and_release('enter')
 
 # Return on empty entery
 while True:
-    va1 = (input('Enter HOMO  '))
+    va1 = (input('Enter HOMO  ')or "4") # Defult value 4 also remove after obtain capsules verification from code ocean
     if va1.strip() != '':
         print(va1)
         break
+
+keyboard.press_and_release('enter')
+
 # warning Caution for zero
 
 if va1 == '0':
@@ -50,9 +61,11 @@ if va1 == '0':
 else:
        print ("")
 
+keyboard.press_and_release('enter')
+
 # Return on empty entery
 while True:
-    va2 = (input('Enter LUMO  '))
+    va2 = (input('Enter LUMO  ')or "7") # Defult value 7 also remove after obtain capsules verificationfrom code ocean
     if va2.strip() != '':
         print(va2)
         break
@@ -106,15 +119,17 @@ print ("**************************************************",file =file)
 # calculation end
 file.write ("HMG.A1")
 file.write (" results depends on your input\n")
-file.write ("credit goes to Muhammad Aziz\t et.al ")
+file.write ("credit goes to Muhammad Aziz\t et.al\n ")
+file.write ("corresponding email: aziz1sh@hotmail.com")
 print(file.readline())
 
 print (z)
 
-input("Save your file ,Enter to exit")
-print ("__________________________________________________")
+input("Save your file ,Enter to exit\n")
 print("The package name is HMG.A1, is developed in Python.")
 print ("**************************************************")
+
+keyboard.press_and_release('enter')
 
 file.close()
 # define path
